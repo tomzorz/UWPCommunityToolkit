@@ -233,6 +233,7 @@
     <Content Include="SamplePages\Bing Service\icon.png" />
     <Content Include="SamplePages\BladeControl\Blade.png" />
     <Content Include="SamplePages\Blur\BlurBehavior.png" />
+    <Content Include="SamplePages\GridSplitter\GridSplitter.png" />
     <Content Include="SamplePages\Facebook Service\FacebookLogo.png" />
     <Content Include="SamplePages\FadeHeader\FadeHeaderBehavior.png" />
     <Content Include="SamplePages\Fade\FadeBehavior.png" />
@@ -240,6 +241,8 @@
     <Content Include="SamplePages\HeaderedTextBlock\HeaderedTextBlock.png" />
     <Content Include="SamplePages\ImageCache\ImageEx.png" />
     <Content Include="SamplePages\ImageEx\ImageEx.png" />
+    <Content Include="SamplePages\MicrosoftGraph Service\OfficeLogo.png" />
+    <Content Include="SamplePages\MicrosoftGraph Service\user.png" />
     <Content Include="SamplePages\Offset\OffsetBehavior.png" />
     <Content Include="SamplePages\PullToRefreshListView\PullToRefreshListView.png" />
     <Content Include="SamplePages\RadialGauge\RadialGauge.png" />
@@ -292,9 +295,14 @@
     <Content Include="SamplePages\Scale\ScaleBehaviorXaml.bind" />
     <Content Include="SamplePages\Rotate\RotateBehaviorXaml.bind" />
     <Content Include="SamplePages\BladeControl\BladeCode.bind" />
+    <Content Include="SamplePages\GridSplitter\GridSplitter.bind" />
     <Content Include="SamplePages\FadeHeader\FadeHeaderBehaviorCode.bind" />
     <Content Include="SamplePages\FadeHeader\FadeHeaderBehaviorXaml.bind" />
     <Content Include="SamplePages\ImageCache\ImageCacheCode.bind" />
+    <None Include="SamplePages\LiveTile\LiveTileCodeJavaScript.bind" />
+    <None Include="SamplePages\Toast\ToastCodeJavaScript.bind" />
+    <None Include="SamplePages\WeatherLiveTileAndToast\WeatherLiveTileAndToastCodeJavaScript.bind" />
+    <Content Include="SamplePages\MicrosoftGraph Service\MicrosoftGraphCode.bind" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -302,6 +310,7 @@
     </Compile>
     <Compile Include="Common\Constants.cs" />
     <Compile Include="Common\DelegateCommand{T}.cs" />
+    <Compile Include="Common\EnumConverter.cs" />
     <Compile Include="Common\SolidColorBrushConverter.cs" />
     <Compile Include="Common\DelegateCommand.cs" />
     <Compile Include="Common\Tools.cs" />
@@ -328,8 +337,19 @@
     <Compile Include="SamplePages\Blur\BlurBehaviorPage.xaml.cs">
       <DependentUpon>BlurBehaviorPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SamplePages\GridSplitter\GridSplitterPage.xaml.cs">
+      <DependentUpon>GridSplitterPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SamplePages\FadeHeader\FadeHeaderBehaviorPage.xaml.cs">
       <DependentUpon>FadeHeaderBehaviorPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SamplePages\MicrosoftGraph Service\IncrementalCollection.cs" />
+    <Compile Include="SamplePages\MicrosoftGraph Service\MicrosoftGraphPage.xaml.cs">
+      <DependentUpon>MicrosoftGraphPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SamplePages\MicrosoftGraph Service\MicrosoftGraphUIExtensions.cs" />
+    <Compile Include="SamplePages\MicrosoftGraph Service\SendMessageContentDialog.xaml.cs">
+      <DependentUpon>SendMessageContentDialog.xaml</DependentUpon>
     </Compile>
     <Compile Include="SamplePages\ImageCache\ImageCachePage.xaml.cs">
       <DependentUpon>ImageCachePage.xaml</DependentUpon>
@@ -433,7 +453,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="SamplePages\GridSplitter\GridSplitterPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="SamplePages\FadeHeader\FadeHeaderBehaviorPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SamplePages\MicrosoftGraph Service\MicrosoftGraphPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SamplePages\MicrosoftGraph Service\SendMessageContentDialog.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
