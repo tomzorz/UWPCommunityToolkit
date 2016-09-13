@@ -13,12 +13,12 @@
 namespace Microsoft.Toolkit.Uwp.UI.Controls
 {
     using System;
+    using System.IO;
     using System.Threading.Tasks;
-    using Microsoft.Toolkit.Uwp.UI.Cache;
+    using Microsoft.Toolkit.Uwp.UI;
     using Windows.UI.Xaml;
     using Windows.UI.Xaml.Media;
     using Windows.UI.Xaml.Media.Imaging;
-    using System.IO;
 
     /// <summary>
     /// The ImageEx control extends the default Image platform control improving the performance and responsiveness of your Apps.
